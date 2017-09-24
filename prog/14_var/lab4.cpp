@@ -9,34 +9,29 @@ void zap (int R, int *p)
 {
     srand ( time(NULL) );
     for (int i=0; i<R; i++)
-    {
-        for ( int j=0; j<R; j++)
+        {for ( int j=0; j<R; j++)
         {
             *(p+i*R+j)=rand() % 10;
             cout<<*(p+i*R+j)<<" ";
         }
-        cout<<"\n";
-    }
+    cout<<"\n";}
 }
 
 void transp (int R, int *p)
 {
     int B;
     for (int i=0; i<R-1; i++)
-    {
-        for ( int j=i+1; j<R; j++)
+        {for ( int j=i+1; j<R; j++)
         {
             B=*(p+i*R+j);
             *(p+i*R+j)=*(p+j*R+i);
             *(p+j*R+i)=B;
         }
-    }
-    for (int i=0; i<R; i++)
-    {
-        for ( int j=0; j<R; j++)
-            cout<<*(p+i*R+j)<<" ";
-        cout<<"\n";
-    }
+        }
+        for (int i=0; i<R; i++)
+        {for ( int j=0; j<R; j++)
+        cout<<*(p+i*R+j)<<" ";
+    cout<<"\n";}
 }
 
 
